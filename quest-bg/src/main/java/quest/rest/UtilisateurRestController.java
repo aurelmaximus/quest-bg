@@ -86,7 +86,6 @@ public class UtilisateurRestController {
 		if(optUtilisateur.isEmpty()) {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 		}
-		
 		return optUtilisateur.get();	
 	}
 

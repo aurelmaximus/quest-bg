@@ -20,5 +20,8 @@
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['/matiere']" routerLinkActive="active">Matiere</a>
     </li>
+    <li *ngIf="boutonDeco()" class="nav-item">
+        <i class="bi bi-x-square" (click)="deco()"></i>
+    </li>
 </ul>
 

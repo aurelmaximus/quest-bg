@@ -1,0 +1,7 @@
+<div *ngIf="!isConnected()" class="form-group">
+Login : <input type="text" class="form-control" [(ngModel)]="login" id="login" name="login"/><br>
+Mot de passe : <input type="text" class="form-control" [(ngModel)]="password" id="password" name="password"/><br>
+</div>
+<a class="btn btn-success" (click)="connect()"><i class="bi bi-check-square-fill"></i></a>
+
+

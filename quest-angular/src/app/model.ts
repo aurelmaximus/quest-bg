@@ -91,3 +91,18 @@ export class Matiere {
     }
 }
 
+
+
+export class Utilisateur{
+    id: number;
+    version: number;
+    nom: string;
+    prenom: string;
+    identifiant: string;
+    motDePasse: string;
+    disabled: boolean;
+    roles: Array<string> = new Array<string>();
+
+    constructor(id?: number, version?:number,nom?: string, prenom?: string, identifiant?: string, motDePasse?: string, disabled?: boolean, roles?: Array<string>){
+    }
+}
