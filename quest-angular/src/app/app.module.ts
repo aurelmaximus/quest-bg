@@ -13,6 +13,7 @@ import { OrdinateurComponent } from './ordinateur/ordinateur.component';
 import { AccueilStagiaireComponent } from './accueil-stagiaire/accueil-stagiaire.component';
 import { MatiereComponent } from './matiere/matiere.component'
 import { FormateurComponent } from './formateur/formateur.component'
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormateurComponent } from './formateur/formateur.component'
     OrdinateurComponent,
     AccueilStagiaireComponent,
     MatiereComponent
+    LoginComponent,
     FormateurComponent
   ],
   imports: [

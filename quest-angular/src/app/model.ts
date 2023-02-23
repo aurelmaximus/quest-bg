@@ -79,15 +79,30 @@ export class Matiere {
     libelle:string;
     quest:number;
     filiere:Filiere;
-    //formateur:Formateur; il faudra penser à l'ajouter dans le constructeur
+    formateur:Formateur;
 
-    constructor(id?:number, version?:number,libelle?:string, quest?:number, filiere?:Filiere){
+    constructor(id?:number, version?:number,libelle?:string, quest?:number, filiere?:Filiere, formateur?:Formateur){
         this.id=id;
         this.version=version;
         this.libelle=libelle;
         this.quest=quest;
         this.filiere=filiere;
-        //this.formateur=formateur;
+        this.formateur=formateur;
     }
 }
 
+
+
+export class Utilisateur{
+    id: number;
+    version: number;
+    nom: string;
+    prenom: string;
+    identifiant: string;
+    motDePasse: string;
+    disabled: boolean;
+    roles: Array<string> = new Array<string>();
+
+    constructor(id?: number, version?:number,nom?: string, prenom?: string, identifiant?: string, motDePasse?: string, disabled?: boolean, roles?: Array<string>){
+    }
+}
