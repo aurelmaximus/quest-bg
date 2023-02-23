@@ -18,4 +18,8 @@ export class LoginComponent {
       this.authService.connection(this.login,this.password);
     }
 
+    isConnected(): boolean{
+      return this.authService.connected?true:false; 
+    }
+
 }

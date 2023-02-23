@@ -11,13 +11,15 @@ export class AuthService {
   }
 
   connection(login:string,password:string){
-    let body = {
+    this.http.post("http://localhost:8888/utilisateur/auth/", {
       login:login,
       password:password
-    };
-    this.http.post("http:localhost:8888/utilisateur/auth",body).subscribe((resp:any) => {
+    }).subscribe((resp:any) => {
       this.connected = resp;
-      console.log(resp);
     })
+  }
+
+  disconnect(){
+    this.connected=null;
   }
 }

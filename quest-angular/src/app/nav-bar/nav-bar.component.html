@@ -14,5 +14,8 @@
     <li class="nav-item">
         <a class="nav-link" [routerLink]="['/stagiaire']" routerLinkActive="active">Stagiaire</a>
     </li>
+    <li *ngIf="boutonDeco()" class="nav-item">
+        <i class="bi bi-x-square" (click)="deco()"></i>
+    </li>
 </ul>
 
