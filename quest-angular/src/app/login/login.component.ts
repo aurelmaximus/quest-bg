@@ -20,13 +20,13 @@ export class LoginComponent {
     let currentUser = this.authService.checkUser();
     console.log(currentUser);
     if (currentUser) {
-      console.log("in b4");
-      if (currentUser.roles[0] == "STAGIAIRE") {
-        console.log("in");
+      if (currentUser.roles[0] == "STAGIAIRE") {}
         this.router.navigate(['/acceuilstagiaire',{id: currentUser.personne.id}]);
       }
+      if(currentUser.roles[1] == "FORMATEUR"){
+        this.router.navigate(['/formateur',{id:currentUser.personne.id}]);
+      }
     }
-  }
 
   isConnected(): boolean {
     return (this.authService.checkUser()?true:false)

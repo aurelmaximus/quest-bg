@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatiereHttpService } from '../matiere/matiere-http.service';
 import { Matiere } from '../model';
 
@@ -8,9 +9,12 @@ import { Matiere } from '../model';
   styleUrls: ['./accueil-stagiaire.component.scss']
 })
 export class AccueilStagiaireComponent {
-  
-  constructor (private matiereService: MatiereHttpService) {
-    
+  id: number;
+
+  constructor (private matiereService: MatiereHttpService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.id=params["id"];
+      });
   }
   list(): Array<Matiere> {
     return this.matiereService.findAll();
