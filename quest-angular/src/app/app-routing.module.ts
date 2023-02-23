@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: "filiere", component: FiliereComponent},
   {path: "ordinateur", component: OrdinateurComponent},
   {path: "accueilstagiaire", component: AccueilStagiaireComponent},
-  {path: "matiere", component: MatiereComponent}
+  {path: "matiere", component: MatiereComponent},
   {path: "formateur", component: FormateurComponent}
 ];
 

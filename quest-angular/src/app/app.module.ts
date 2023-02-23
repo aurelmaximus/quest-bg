@@ -23,7 +23,7 @@ import { FormateurComponent } from './formateur/formateur.component'
     FiliereComponent,
     OrdinateurComponent,
     AccueilStagiaireComponent,
-    MatiereComponent
+    MatiereComponent,
     FormateurComponent
   ],
   imports: [
