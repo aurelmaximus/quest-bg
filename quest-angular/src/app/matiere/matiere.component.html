@@ -1,1 +1,98 @@
-<p>matiere works!</p>
+<div class="card mt-3">
+    <div class="card-header bg-primary text-white display-6">Liste des matières</div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Version</th>
+                    <th>Libellé</th>
+                    <th>Quest</th>
+                    <th>Filiere</th>
+                    <th>Formateur</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let matiere of list()">
+                    <td>{{matiere.id}}</td>
+                    <td>{{matiere.version}}</td>
+                    <td>{{matiere.libelle}}</td>
+                    <td>{{matiere.quest}}</td>
+                    <td>{{matiere.filiere?.id}} - {{matiere.filiere?.libelle}}</td>
+                    <td>{{matiere.formateur?.id}} - {{matiere.formateur?.nom}}</td>
+
+                    <td>
+                        <div class="btn-group btn-group-sm">
+                            <a class="btn btn-primary" (click)="edit(matiere.id)"><i
+                                    class="bi bi-pencil-square"></i></a>
+                            <a class="btn btn-danger" (click)="remove(matiere.id)"><i class="bi bi-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>            
+ 
+</div>
+<div class="card-footer">
+    <a class="btn btn-success btn-lg" (click)="add()"><i
+        class="bi bi-plus-square"></i></a>
+</div>
+</div>
+
+<div class="card mt-3" *ngIf="formMatiere">
+    <div class="card-header bg-primary text-white display-6">Edition d'un stagiaire</div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="id">Identifiant:</label> <input type="number" class="form-control" id="id" name="id" [(ngModel)]="formMatiere.id" readonly/>
+        </div>
+        <div class="form-group">
+            <label for="version">Version:</label> <input type="number" class="form-control" id="version" name="version" [(ngModel)]="formMatiere.version" readonly />
+        </div>
+        <div class="form-group">
+            <label for="libelle">Libellé:</label> <input type="text" class="form-control" id="libelle" name="libelle" [(ngModel)]="formMatiere.libelle" />
+        </div>
+        <div class="form-group">
+            <label for="quest">Quest:</label> <input type="text" class="form-control" id="quest" name="quest" [(ngModel)]="formMatiere.quest" />
+        </div>
+      
+        <!--
+          <div class="form-group">
+            <label for="filiere">Filiere:</label> <input type="text" class="form-control" id="filiere" name="filiere" [(ngModel)]="formMatiere.filiere.id" />
+        </div>
+        <div class="form-group">
+            <label for="formateur">Formateur:</label> <input type="text" class="form-control" id="formateur" name="formateur" [(ngModel)]="formMatiere.formateur.id" />
+        </div>
+        --> 
+
+        <div class="form-group">
+            <label for="filiere">Filiere:</label>
+            <select class="form-control" id="filiere" name="filiere" [(ngModel)]="formMatiere.filiere.id">
+                <option value="">Veuillez sélectionner une filiere</option>
+                <option *ngFor="let fil of listFilieres()" [value]="fil.id">{{fil.id}} - {{fil.libelle}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="formateur">Formateur:</label>
+            <select class="form-control" id="formateur" name="formateur" [(ngModel)]="formMatiere.formateur.id">
+                <option value="">Veuillez sélectionner un formateur</option>
+                <option *ngFor="let fo of listFormateurs()" [value]="fo.id">{{fo.id}} - {{fo.nom}}</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="card-footer">
+        <div class="btn-group btn-group-lg float-right">
+            <a class="btn btn-success" (click)="save()"><i class="bi bi-check-square-fill"></i></a>
+            <a class="btn btn-warning" (click)="cancel()"><i class="bi bi-backspace-fill"></i></a>
+        </div>
+    </div>
+</div>
+<div class="card mt-3">
+
+
+
+
+
