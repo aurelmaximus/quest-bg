@@ -11,6 +11,7 @@ import { FiliereComponent } from './filiere/filiere.component';
 import { HttpClientModule }from '@angular/common/http';
 import { OrdinateurComponent } from './ordinateur/ordinateur.component';
 import { FormateurComponent } from './formateur/formateur.component'
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormateurComponent } from './formateur/formateur.component'
     StagiaireComponent,
     FiliereComponent,
     OrdinateurComponent,
+    LoginComponent,
     FormateurComponent
   ],
   imports: [

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FiliereComponent } from './filiere/filiere.component';
 import { FormateurComponent } from './formateur/formateur.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { OrdinateurComponent } from './ordinateur/ordinateur.component';
 import { StagiaireComponent } from './stagiaire/stagiaire.component';
 
@@ -11,7 +12,11 @@ const routes: Routes = [
   {path: "stagiaire", component: StagiaireComponent},
   {path: "filiere", component: FiliereComponent},
   {path: "ordinateur", component: OrdinateurComponent},
+<<<<<<< Updated upstream
   {path: "formateur", component: FormateurComponent}
+=======
+  {path: "login", component: LoginComponent}
+>>>>>>> Stashed changes
 ];
 
 @NgModule({
