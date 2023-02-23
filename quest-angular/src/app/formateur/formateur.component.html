@@ -1,8 +1,8 @@
 <div class="card mt-3">
-    <div class="card-header bg-primary text-white display-6">Information formateur</div>
+    <div class="card-header bg-success text-white display-6">Information formateur</div>
     <div class="card-body">
-        <table class="table table-striped">
-            <thead>
+        <table class="table">
+            <thead class="table-dark">
                 <tr>
                     <th>Identifiant</th>
                     <th>Version</th>
@@ -10,22 +10,102 @@
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Email</th>
-                    <th>Date de naissance</th>
-                    <th>Niveau d'étude  </th>
-                    <th>Ordinateur</th>
-                    <th>Filiere</th>
+                    <th>Externe</th>
+                    <th>Experience</th>
                     <th></th>
                 </tr>
             </thead>
 
             <tbody>
-              
+                <tr *ngFor="let form of list()">
+                    <td>{{form.id}}</td>
+                    <td>{{form.version}}</td>
+                    <td>{{form.civilite}}</td>
+                    <td>{{form.nom}}</td>
+                    <td>{{form.prenom }}</td>
+                    <td>{{form.email}}</td>
+                    <td>{{form.externe}}</td>
+                    <td>{{form.experience}}</td>
+                </tr>
             </tbody>
 
         </table>
     </div>
   
 </div>
+
+<div class="card mt-3">
+    <div class="card-header bg-success text-white display-6">Liste des filières référent</div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Version</th>
+                    <th>Civilité</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Externe</th>
+                    <th>Experience</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let form of list()">
+                    <td>{{form.id}}</td>
+                    <td>{{form.version}}</td>
+                    <td>{{form.civilite}}</td>
+                    <td>{{form.nom}}</td>
+                    <td>{{form.prenom }}</td>
+                    <td>{{form.email}}</td>
+                    <td>{{form.externe}}</td>
+                    <td>{{form.experience}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+  
+</div>
+
+<div class="card mt-3">
+    <div class="card-header bg-success text-white display-6">Liste des matières</div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Identifiant</th>
+                    <th>Version</th>
+                    <th>Civilité</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Externe</th>
+                    <th>Experience</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let form of list()">
+                    <td>{{form.id}}</td>
+                    <td>{{form.version}}</td>
+                    <td>{{form.civilite}}</td>
+                    <td>{{form.nom}}</td>
+                    <td>{{form.prenom }}</td>
+                    <td>{{form.email}}</td>
+                    <td>{{form.externe}}</td>
+                    <td>{{form.experience}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+  
+</div>
+
 
 
 
