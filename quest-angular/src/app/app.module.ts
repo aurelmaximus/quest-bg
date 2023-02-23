@@ -9,7 +9,8 @@ import { StagiaireComponent } from './stagiaire/stagiaire.component';
 import { FormsModule } from '@angular/forms';
 import { FiliereComponent } from './filiere/filiere.component';
 import { HttpClientModule }from '@angular/common/http';
-import { OrdinateurComponent } from './ordinateur/ordinateur.component'
+import { OrdinateurComponent } from './ordinateur/ordinateur.component';
+import { FormateurComponent } from './formateur/formateur.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OrdinateurComponent } from './ordinateur/ordinateur.component'
     HomeComponent,
     StagiaireComponent,
     FiliereComponent,
-    OrdinateurComponent
+    OrdinateurComponent,
+    FormateurComponent
   ],
   imports: [
     BrowserModule,

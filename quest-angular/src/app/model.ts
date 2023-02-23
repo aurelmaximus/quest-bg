@@ -29,6 +29,19 @@ export class Stagiaire extends Personne {
     }
 }
 
+export class Formateur extends Personne {
+    externe: boolean;
+    experience: number;
+
+
+    constructor(id?:number, version?: number , civilite?: string, nom?: string, prenom?: string, email? :string, externe?: boolean, experience?: number) {
+        super(id, version, civilite, nom, prenom, email);
+        this.externe = externe;
+        this.experience = experience;
+    }
+}
+
+
 export class Filiere {
     id: number;
     version: number;
