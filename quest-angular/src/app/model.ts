@@ -5,8 +5,9 @@ export abstract class Personne {
     nom: string;
     prenom: string;
     email: string;
+    utilisateur: Utilisateur;
  
-    constructor(id?:number, version?: number , civilite?: string, nom?: string, prenom?: string, email? :string) {
+    constructor(id?:number, version?: number , civilite?: string, nom?: string, prenom?: string, email? :string,utilisateur?: Utilisateur) {
         this.id = id;
         this.version = version;
         this.civilite = civilite;
@@ -102,7 +103,8 @@ export class Utilisateur{
     motDePasse: string;
     disabled: boolean;
     roles: Array<string> = new Array<string>();
+    personne: Personne;
 
-    constructor(id?: number, version?:number,nom?: string, prenom?: string, identifiant?: string, motDePasse?: string, disabled?: boolean, roles?: Array<string>){
+    constructor(id?: number, version?:number,nom?: string, prenom?: string, identifiant?: string, motDePasse?: string, disabled?: boolean, roles?: Array<string>, personne?: Personne){
     }
 }

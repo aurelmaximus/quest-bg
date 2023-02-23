@@ -7,7 +7,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  constructor(private authService:AuthService){
+  constructor(private authService: AuthService){
   }
 
   boutonDeco():boolean{

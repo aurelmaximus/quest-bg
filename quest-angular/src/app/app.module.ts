@@ -24,7 +24,7 @@ import { LoginComponent } from './login/login.component';
     FiliereComponent,
     OrdinateurComponent,
     AccueilStagiaireComponent,
-    MatiereComponent
+    MatiereComponent,
     LoginComponent,
     FormateurComponent
   ],

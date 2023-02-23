@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Formateur } from '../model';
 import { FormateurHttpService } from './formateur-http.service';
 
@@ -10,9 +11,14 @@ import { FormateurHttpService } from './formateur-http.service';
 export class FormateurComponent {
 
   formFormateur: Formateur = null;
+  id:number;
 
 
-  constructor(private formateurService: FormateurHttpService) {
+
+  constructor(private formateurService: FormateurHttpService, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      this.id=params["id"];
+      });
   }
 
   list(): Array<Formateur> {
