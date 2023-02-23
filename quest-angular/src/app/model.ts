@@ -72,3 +72,22 @@ export class Ordinateur {
         this.ram = ram;
     }
 }
+
+export class Matiere {
+    id:number;
+    version: number;
+    libelle:string;
+    quest:number;
+    filiere:Filiere;
+    //formateur:Formateur; il faudra penser à l'ajouter dans le constructeur
+
+    constructor(id?:number, version?:number,libelle?:string, quest?:number, filiere?:Filiere){
+        this.id=id;
+        this.version=version;
+        this.libelle=libelle;
+        this.quest=quest;
+        this.filiere=filiere;
+        //this.formateur=formateur;
+    }
+}
+

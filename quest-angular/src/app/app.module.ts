@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { FiliereComponent } from './filiere/filiere.component';
 import { HttpClientModule }from '@angular/common/http';
 import { OrdinateurComponent } from './ordinateur/ordinateur.component';
+import { AccueilStagiaireComponent } from './accueil-stagiaire/accueil-stagiaire.component';
+import { MatiereComponent } from './matiere/matiere.component'
 import { FormateurComponent } from './formateur/formateur.component'
 
 @NgModule({
@@ -20,6 +22,8 @@ import { FormateurComponent } from './formateur/formateur.component'
     StagiaireComponent,
     FiliereComponent,
     OrdinateurComponent,
+    AccueilStagiaireComponent,
+    MatiereComponent
     FormateurComponent
   ],
   imports: [
