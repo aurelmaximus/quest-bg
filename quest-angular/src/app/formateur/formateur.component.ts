@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Formateur } from '../model';
+import { FiliereHttpService } from '../filiere/filiere-http.service';
+import { MatiereHttpService } from '../matiere/matiere-http.service';
+import { Filiere, Formateur, Matiere } from '../model';
 import { FormateurHttpService } from './formateur-http.service';
 
 @Component({
@@ -15,7 +17,7 @@ export class FormateurComponent {
 
 
 
-  constructor(private formateurService: FormateurHttpService, private route: ActivatedRoute) {
+constructor(private formateurService: FormateurHttpService, private filiereService: FiliereHttpService,private matiereService: MatiereHttpService, private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
       this.id=params["id"];
       });
@@ -25,34 +27,15 @@ export class FormateurComponent {
     return this.formateurService.findAll();
   }
 
-
-  add(): void {
-    this.formFormateur = new Formateur();
+  listFilieres(): Array<Filiere> {
+    return this.filiereService.findAll();
   }
 
-  edit(id: number): void {
-    this.formateurService.findById(id).subscribe(response => {
-      this.formFormateur = response;
-    });
+  listMatieres(): Array<Matiere> {
+    return this.matiereService.findAll();
   }
 
-  save(): void {
-    if(this.formFormateur.id) { // UPDATE
-      this.formateurService.update(this.formFormateur);
-    } else { // CREATE
-      this.formateurService.create(this.formFormateur);
-    }
 
-    this.cancel();
-  }
-
-  remove(id: number): void {
-    this.formateurService.remove(id);
-  }
-
-  cancel(): void {
-    this.formFormateur = null;
-  }
 }
 
 
